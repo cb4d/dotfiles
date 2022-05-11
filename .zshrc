@@ -105,3 +105,7 @@ export PATH="$JAVA_HOME:$PATH"
 
 # my bin dir
 export PATH="/Users/fordc02/bin/:$PATH"
+
+# requires https://github.com/avantrec/soco-cli
+alias nts="sonos -l \"Living Room \" play_fav \"nts\""
+alias spp="sonos -l \"Living Room \" playpause"
