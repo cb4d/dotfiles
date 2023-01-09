@@ -19,6 +19,7 @@ Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-syntastic/syntastic'
 Plug 'preservim/nerdtree'
+Plug 'itspriddle/vim-shellcheck'
 
 call plug#end()
 

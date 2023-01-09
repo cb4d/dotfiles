@@ -100,12 +100,39 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export JAVA_HOME="/Applications/Android\ Studio.app/Contents/jre/Contents/Home/"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home"
 export PATH="$JAVA_HOME:$PATH"
 
 # my bin dir
 export PATH="/Users/fordc02/bin/:$PATH"
+export PATH="/Users/fordc02/bin/ixmaat0.8.5/:$PATH"
+[ -f "/Users/fordc02/.ghcup/env" ] && source "/Users/fordc02/.ghcup/env" # ghcup-env
 
-# requires https://github.com/avantrec/soco-cli
-alias nts="sonos -l \"Living Room \" play_fav \"nts\""
-alias spp="sonos -l \"Living Room \" playpause"
+# rbenv
+eval "$(rbenv init - zsh)"
+
+alias nts="sonos -l \"Bedroom\" play_fav \"nts\""
+alias rsix="sonos -l \"Bedroom\" play_fav \"Radio 6 Music\""
+alias spp="sonos -l \"Bedroom\" playpause"
+alias sup="zoom standup"
+
+# add platform-tools (inc. adb) to path
+export ANDROID_HOME=/Users/$USER/Library/Android/sdk
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
+alias zp="echo \"https://bbc.zoom.us/j/9342028435\" | pbcopy && zoom personal"
+
+alias cdios="cd ~/dev/ios/smp-ios"
+alias cdan="cd ~/dev/android/smp-an"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/fordc02/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/fordc02/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/fordc02/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/fordc02/google-cloud-sdk/completion.zsh.inc'; fi
+
+# copy jira ticket template to clipboard so I don't have to fish it out of slack
+alias jira-story="cat ~/Documents/jira-templates/story.txt | pbcopy"
+alias jira-bug="cat ~/Documents/jira-templates/bug.txt | pbcopy"
+alias jira-epic="cat ~/Documents/jira-templates/epic.txt | pbcopy"
+
